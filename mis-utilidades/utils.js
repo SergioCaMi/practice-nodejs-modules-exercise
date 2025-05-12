@@ -13,4 +13,13 @@ function getRandomElementFromArray(arr) {
 }
 
 
-module.exports.getRandomElementFromArray = getRandomElementFromArray;
+function getAvgFromArray(arr){
+    let sum = 0;
+    arr.forEach(element => {
+        sum = Number(element) + sum; 
+    });
+    return sum / arr.length;
+}
+
+module.exports = {getRandomElementFromArray, 
+    getAvgFromArray};
